@@ -1,0 +1,11 @@
+{
+    "metadata": {
+        "title": "Some song",
+        "romanized_title": "Some song",
+        "creator": "Animain",
+        "spacing": 10.0
+    },
+    "bpm": [
+        {"time": 0.0, "bpm": 180.0}
+    ]
+}
