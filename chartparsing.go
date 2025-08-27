@@ -12,24 +12,22 @@ type Note struct {
 	Duration float64 `json:"duration"`
 }
 
-type EffectArgs struct {
+type ZoomEffect struct {
 	Level    float64 `json:"level"`
 	Duration float64 `json:"duration"`
 	Ease     string  `json:"ease"`
 }
 
-type Effect struct {
-	Time float64    `json:"time"`
-	Type string     `json:"type"`
-	Args EffectArgs `json:"args"`
+type Effects struct {
+	Zoom []ZoomEffect `json:"zoom"`
 }
 
 type Chart struct {
-	Notes   []Note   `json:"notes"`
-	Effects []Effect `json:"effects"`
+	Notes   []Note    `json:"notes"`
+	Effects []Effects `json:"effects"`
 }
 
-func UnmarshalChartFromFile(filename string) (*Chart, error) {
+func ParseChartFromFile(filename string) (*Chart, error) {
 	data, err := os.ReadFile(filename)
 	if err != nil {
 		return nil, err
