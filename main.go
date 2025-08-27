@@ -20,6 +20,7 @@ func main() {
 		rl.BeginDrawing()
 
 		rl.ClearBackground(rl.Black)
+		rl.DrawRectangle(0, 0, 100, 100, rl.RayWhite)
 
 		rl.EndDrawing()
 	}
